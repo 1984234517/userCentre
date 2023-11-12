@@ -9,7 +9,3 @@ import com.example.usercenter.model.domain.User;
 public interface UserMapper extends BaseMapper<User> {
 
 }
-
-
-
-
