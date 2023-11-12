@@ -9,13 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- *用户接口
+ * 用户接口
+ * 
  * @author tan
  */
 public interface UserService extends IService<User> {
 
     /**
      * 用户注册
+     * 
      * @param userAccount 用户账号
      * @param userPassword 用户密码
      * @param checkPassword 校验密码
@@ -26,6 +28,7 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户登陆
+     * 
      * @param userAccount 用户账号
      * @param userPassword 用户密码
      * @param request 用户请求
@@ -35,6 +38,7 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户信息脱敏
+     * 
      * @param originUser 原始用户对象
      * @return 信息脱敏后的用户对象
      */
@@ -42,6 +46,7 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户查询
+     * 
      * @param username 用户名
      * @return 满足条件的用户列表
      */
@@ -49,6 +54,7 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户删除
+     * 
      * @param id 用户id
      * @return 是否成功删除
      */
@@ -56,14 +62,15 @@ public interface UserService extends IService<User> {
 
     /**
      * 查詢當前用戶
+     * 
      * @param id 用戶id
      * @return 當前用戶信息
      */
     userLoginRes getCurrent(Long id);
 
-
     /**
      * 用户注销
+     * 
      * @param request cookie等信息
      * @return 是否成功注销
      */

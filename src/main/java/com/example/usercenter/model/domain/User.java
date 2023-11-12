@@ -8,9 +8,10 @@ import java.util.Date;
 
 /**
  * 用户表
+ * 
  * @TableName user
  */
-@TableName(value ="user")
+@TableName(value = "user")
 @Data
 public class User implements Serializable {
     /**

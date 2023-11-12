@@ -19,16 +19,16 @@ import static com.example.usercenter.common.ErrorCode.*;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)
-    public BaseResponse businessExceptionHandler(BusinessException e){
-        log.error("businessException"+e.getMessage(), e);
+    public BaseResponse businessExceptionHandler(BusinessException e) {
+        log.error("businessException" + e.getMessage(), e);
 
         System.out.println("成功捕获");
-        return ResultUtils.error(e.getCode(), e.getMessage(),e.getDescription());
+        return ResultUtils.error(e.getCode(), e.getMessage(), e.getDescription());
     }
 
-//    @ExceptionHandler(RuntimeException.class)
-//    public BaseResponse runtimeExceptionHandler(RuntimeException e){
-//        log.error("runtimeException", e);
-//        return ResultUtils.error(SYSTEM_ERROR, e.getMessage(),"");
-//    }
+    // @ExceptionHandler(RuntimeException.class)
+    // public BaseResponse runtimeExceptionHandler(RuntimeException e){
+    // log.error("runtimeException", e);
+    // return ResultUtils.error(SYSTEM_ERROR, e.getMessage(),"");
+    // }
 }

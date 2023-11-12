@@ -2,6 +2,7 @@ package com.example.usercenter.constant;
 
 /**
  * 用户常量
+ * 
  * @author tan
  */
 // 使用接口是因为接口成员变量值是public static的

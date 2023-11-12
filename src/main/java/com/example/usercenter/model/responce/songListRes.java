@@ -3,7 +3,6 @@ package com.example.usercenter.model.responce;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 
 
 /**

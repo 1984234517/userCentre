@@ -1,6 +1,5 @@
 package com.example.usercenter.controller;
 
-
 import com.example.usercenter.common.BaseResponse;
 import com.example.usercenter.common.ResultUtils;
 import com.example.usercenter.exception.BusinessException;
@@ -31,12 +30,13 @@ public class songController {
     private SongService songService;
 
     @GetMapping("/search")
-    public BaseResponse<List<songInfoRes>> getSongList(String type, String keyWords, HttpServletRequest request) throws IOException {
+    public BaseResponse<List<songInfoRes>> getSongList(String type, String keyWords, HttpServletRequest request)
+        throws IOException {
         // 检查是否登录
         Object userObject = request.getSession().getAttribute(USER_LOGIN_STATE);
-        userLoginRes user = (userLoginRes) userObject;
-        if (user == null){
-            throw  new BusinessException(NOT_LOGIN);
+        userLoginRes user = (userLoginRes)userObject;
+        if (user == null) {
+            throw new BusinessException(NOT_LOGIN);
         }
         List<songInfoRes> songList = songService.getSongList(type, keyWords);
         return ResultUtils.success(songList);

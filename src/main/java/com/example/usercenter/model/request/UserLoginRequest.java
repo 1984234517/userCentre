@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * 用户登陆请求体
+ * 
  * @author tan
  */
 @Data

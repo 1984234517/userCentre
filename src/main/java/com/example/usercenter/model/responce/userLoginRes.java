@@ -1,4 +1,5 @@
 package com.example.usercenter.model.responce;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
@@ -9,6 +10,7 @@ import java.util.Date;
 
 /**
  * 用户登录返回体
+ * 
  * @author tan
  */
 @Data

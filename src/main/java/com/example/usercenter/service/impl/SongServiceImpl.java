@@ -1,7 +1,5 @@
 package com.example.usercenter.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.example.usercenter.constant.HttpUtil;
 import com.example.usercenter.constant.JsonUtils;
 import com.example.usercenter.constant.SongConstant;
