@@ -99,7 +99,7 @@ public class userController {
     @GetMapping("/current")
     public BaseResponse<userLoginRes> getCurrent(HttpServletRequest request) {
         Object userObject = request.getSession().getAttribute(USER_LOGIN_STATE);
-        User user = (User)userObject;
+        userLoginRes user = (userLoginRes)userObject;
         if (user == null) {
             throw new BusinessException(NOT_LOGIN);
         }

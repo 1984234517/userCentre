@@ -135,7 +135,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new BusinessException(USER_NOT_EXIT);
         }
         userLoginRes safetyUser = new userLoginRes();
-        BeanUtils.copyProperties(safetyUser, originUser);
+        BeanUtils.copyProperties(originUser, safetyUser);
         return safetyUser;
     }
 

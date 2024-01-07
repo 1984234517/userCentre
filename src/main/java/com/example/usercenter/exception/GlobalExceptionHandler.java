@@ -21,8 +21,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public BaseResponse businessExceptionHandler(BusinessException e) {
         log.error("businessException" + e.getMessage(), e);
-
-        System.out.println("成功捕获");
         return ResultUtils.error(e.getCode(), e.getMessage(), e.getDescription());
     }
 
